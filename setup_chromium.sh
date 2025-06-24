@@ -47,7 +47,7 @@ else
 fi
 
 # === Step 5: Create chromium directory ===
-mkdir -p /root/chromium/config
+mkdir -p $HOME/chromium/config
 
 # === Step 6: Generate docker-compose.yml ===
 echo -e "${GREEN}[5/12] Generating docker-compose.yml...${NC}"
@@ -68,7 +68,7 @@ services:
       - PGID=1000
       - TZ=Asia/Kolkata
     volumes:
-      - /root/chromium/config:/config
+      - $HOME/chromium/config:/config
     ports:
       - 4100:3000
       - 4101:3001
