@@ -20,7 +20,6 @@ Access it from your browser with VNC-over-web and login authentication.
 1. **SSH into your VPS**
 
 2. **Install Dependencies**
-3. 
 ```bash
 sudo apt update && sudo apt install curl -y
 ```
