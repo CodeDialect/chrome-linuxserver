@@ -22,7 +22,7 @@ Access it from your browser with VNC-over-web and login authentication.
 2. **Download and run the script:**
 
 ```bash
-bash <(curl -sL https://raw.githubusercontent.com/CodeDialect/chromium-docker/main/setup_chromium.sh)
+bash <(curl -sL https://raw.githubusercontent.com/CodeDialect/chrome-linuxserver/main/setup_chromium.sh)
 ```
 
 > You will be asked for a username and password use these later to log in to the browser interface.
