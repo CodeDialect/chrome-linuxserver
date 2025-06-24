@@ -68,7 +68,7 @@ services:
       - PGID=1000
       - TZ=Asia/Kolkata
     volumes:
-      - $HOME/chromium/config:/config
+      - ${HOME}/chromium/config:/config
     ports:
       - 4100:3000
       - 4101:3001
