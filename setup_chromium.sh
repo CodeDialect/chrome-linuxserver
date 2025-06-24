@@ -21,7 +21,7 @@ echo -e "${NC}"
 
 # === Step 1: Install dependencies ===
 echo -e "${GREEN}[1/12] Installing required dependencies...${NC}"
-apt-get update && apt-get install -y curl wget ufw ca-certificates gnupg lsb-release
+sudo apt-get update && sudo apt-get install -y curl wget ufw ca-certificates gnupg lsb-release
 
 # === Step 2: Ask for credentials ===
 echo -e "${GREEN}[2/12] Enter Chromium Login Credentials...${NC}"
@@ -78,19 +78,19 @@ EOF
 
 # === Step 7: Start the container ===
 echo -e "${GREEN}[6/12] Launching Chromium container...${NC}"
-docker compose up -d
+sudo docker compose up -d
 
 # === Step 8: UFW Setup ===
 echo -e "${GREEN}[7/12] Setting up UFW firewall...${NC}"
 if ! command -v ufw &> /dev/null; then
   echo -e "${YELLOW}UFW not found, installing it...${NC}"
-  apt-get install -y ufw
+  sudo apt-get install -y ufw
 fi
 
-ufw allow 22/tcp    # SSH
-ufw allow 4100/tcp  # Chromium Web UI
-ufw allow 4101/tcp  # VNC
-ufw --force enable
+sudo ufw allow 22/tcp    # SSH
+sudo ufw allow 4100/tcp  # Chromium Web UI
+sudo ufw allow 4101/tcp  # VNC
+sudo ufw --force enable
 
 echo -e "${GREEN}[8/12] UFW enabled and necessary ports allowed (22, 4100, 4101).${NC}"
 
