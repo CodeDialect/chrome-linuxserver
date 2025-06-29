@@ -57,7 +57,7 @@ version: "3.9"
 
 services:
   chromium:
-    image: lscr.io/linuxserver/chromium:latest
+    image: lscr.io/linuxserver/chromium:8d3cb5f1-ls129
     container_name: chromium
     security_opt:
       - seccomp:unconfined
