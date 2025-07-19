@@ -15,7 +15,7 @@ Access it from your browser with VNC-over-web and login authentication.
 
 ---
 
-## 🚀 Quick Start
+## 🚀 Quick Start for single chromium without proxy
 
 1. **SSH into your VPS**
 
@@ -29,6 +29,24 @@ sudo apt update && sudo apt install curl -y
 ```bash
 bash <(curl -sL https://raw.githubusercontent.com/CodeDialect/chrome-linuxserver/main/setup_chromium.sh)
 ```
+
+
+## 🚀 Quick Start for multiple chromium multiple proxy
+
+1. **SSH into your VPS**
+
+2. **Install Dependencies**
+```bash
+sudo apt update && sudo apt install curl -y
+```
+
+3. **Download and run the script:**
+
+```bash
+bash <(curl -sL https://raw.githubusercontent.com/CodeDialect/chrome-linuxserver/main/multi_chromium.sh)
+```
+
+
 
 > You will be asked for a username and password use these later to log in to the browser interface.
 
